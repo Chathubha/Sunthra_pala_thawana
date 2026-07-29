@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #1a5c2a;
+  --primary-light: #2d8a3e;
+  --primary-dark: #0e3b1a;
+  --accent: #f5a623;
+  --accent-light: #ffd54f;
+  --bg-cream: #faf8f0;
+  --bg-light: #f0f7f0;
+  --text-dark: #1a1a2e;
+  --text-light: #4a4a4a;
+  --white: #ffffff;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --radius: 16px;
+  --radius-sm: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans Sinhala', sans-serif;
+  background: var(--bg-cream);
+  color: var(--text-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
