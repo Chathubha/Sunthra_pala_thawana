@@ -344,7 +344,7 @@ function App() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {products.map((product, i) => (
+            {products.map((product) => (
               <div
                 key={product.name}
                 className="group relative h-[26rem] overflow-hidden rounded-3xl bg-gradient-to-b from-mist to-cream shadow-md"
@@ -354,18 +354,6 @@ function App() {
                   alt={product.name}
                   className="absolute inset-0 m-auto h-full w-full object-contain p-5 transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary-dark/80 to-transparent pt-20"></div>
-                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-6 text-white">
-                  <div>
-                    <span className="mb-2 inline-block rounded-full bg-white/20 px-4 py-1 text-xs font-semibold backdrop-blur">
-                      {i === 0 ? 'විශේෂාංගය' : 'ගැලරිය'}
-                    </span>
-                    <h3 className="text-xl font-extrabold">{product.name}</h3>
-                  </div>
-                  <span className="rounded-full bg-accent px-4 py-1.5 text-sm font-bold text-primary-dark">
-                    {product.price}
-                  </span>
-                </div>
               </div>
             ))}
           </div>
