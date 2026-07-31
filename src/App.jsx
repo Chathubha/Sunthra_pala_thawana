@@ -17,6 +17,19 @@ function App() {
     setMenuOpen(false)
   }
 
+  const handleWhatsAppSubmit = (e) => {
+    e.preventDefault()
+    const f = e.target
+    const text =
+      `හෙලෝ සුනේත්‍රා පැළ තවාන! 🌱\n\n` +
+      `ඔබේ නම: ${f.name.value}\n` +
+      `ඊමේල්: ${f.email.value}\n` +
+      `දුරකථන: ${f.phone.value}\n\n` +
+      `පණිවිඩය:\n${f.message.value}`
+    window.open(`https://wa.me/94763285018?text=${encodeURIComponent(text)}`, '_blank')
+    f.reset()
+  }
+
   const navLinks = [
     { id: 'hero', label: 'මුල් පිටුව' },
     { id: 'about', label: 'අප ගැන' },
@@ -414,7 +427,7 @@ function App() {
               </div>
             </div>
 
-            <form className="relative overflow-hidden rounded-3xl border border-primary/10 bg-white p-8 shadow-md md:p-10">
+            <form onSubmit={handleWhatsAppSubmit} className="relative overflow-hidden rounded-3xl border border-primary/10 bg-white p-8 shadow-md md:p-10">
               <span className="absolute right-0 top-0 rounded-bl-3xl bg-primary/5 px-5 py-2 text-xs font-bold text-primary">
                 📝 පණිවිඩයක් එවන්න
               </span>
@@ -425,6 +438,7 @@ function App() {
                     <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">👤</span>
                     <input
                       type="text"
+                      name="name"
                       placeholder="ඔබේ නම ඇතුළත් කරන්න"
                       required
                       className="w-full rounded-xl border border-gray-200 bg-mist/60 py-3.5 pl-11 pr-5 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
@@ -437,6 +451,7 @@ function App() {
                     <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">✉️</span>
                     <input
                       type="email"
+                      name="email"
                       placeholder="you@example.com"
                       required
                       className="w-full rounded-xl border border-gray-200 bg-mist/60 py-3.5 pl-11 pr-5 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
@@ -449,6 +464,7 @@ function App() {
                     <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">📞</span>
                     <input
                       type="tel"
+                      name="phone"
                       placeholder="07X XXX XXXX"
                       className="w-full rounded-xl border border-gray-200 bg-mist/60 py-3.5 pl-11 pr-5 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                     />
@@ -460,6 +476,7 @@ function App() {
                     <span className="absolute left-4 top-4 text-gray-400">💬</span>
                     <textarea
                       rows="4"
+                      name="message"
                       placeholder="ඔබේ පණිවිඩය මෙතැන ලියන්න..."
                       required
                       className="w-full resize-none rounded-xl border border-gray-200 bg-mist/60 py-3.5 pl-11 pr-5 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
@@ -503,7 +520,7 @@ function App() {
                   </svg>
                 </a>
                 <a
-                  href="https://wa.me/94775586115"
+                  href="https://wa.me/94763285018"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="WhatsApp"
