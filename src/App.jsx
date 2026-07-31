@@ -54,7 +54,7 @@ function App() {
             <span className="hero-title-accent">පැළ තවාන</span>
           </h1>
           <p className="hero-subtitle">
-            ගුණාත්මක පැළ හා ගස් වර්ග ඔබ වෙතට... ස්වභාවයට ආදරය කරන සෑම කෙනෙකුටම අපගේ තවාන විවෘතයි.
+            ගුණාත්මක පැළ වර්ග ඔබ වෙතට... ස්වභාවයට ආදරය කරන සෑම කෙනෙකුටම අපගේ තවාන විවෘතයි.
           </p>
           <div className="hero-buttons">
             <button className="btn btn-primary" onClick={() => scrollTo('products')}>
@@ -67,7 +67,7 @@ function App() {
           </div>
           <div className="hero-stats">
             <div className="stat">
-              <span className="stat-num">50+</span>
+              <span className="stat-num">10+</span>
               <span className="stat-label">පැළ වර්ග</span>
             </div>
             <div className="stat-divider"></div>
@@ -77,7 +77,7 @@ function App() {
             </div>
             <div className="stat-divider"></div>
             <div className="stat">
-              <span className="stat-num">1000+</span>
+              <span className="stat-num">100+</span>
               <span className="stat-label">සතුටු පාරිභෝගිකයින්</span>
             </div>
           </div>
@@ -105,7 +105,7 @@ function App() {
               </div>
               <h3>අපගේ දැක්ම</h3>
               <p>
-                ගුණාත්මක පැළ හා ගස් වර්ග බෝ කර ඒවා පරිසර හිතකාමී ලෙස වගා කරමින් සෑම නිවසකටම හරිත පරිසරයක් නිර්මාණය කිරීම අපගේ ඉලක්කයයි.
+                ගුණාත්මක පැළ වර්ග බෝ කර ඒවා පරිසර හිතකාමී ලෙස වගා කරමින් සෑම නිවසකටම හරිත පරිසරයක් නිර්මාණය කිරීම අපගේ ඉලක්කයයි.
               </p>
               <div className="about-card-line"></div>
             </div>
@@ -145,80 +145,41 @@ function App() {
           <div className="products-grid">
             <div className="product-card">
               <div className="product-img">
-                <span>🌴</span>
+                <img src="/images/dehi.webp" alt="දෙහි" />
                 <div className="product-img-shine"></div>
               </div>
               <div className="product-body">
-                <h3 className="product-name">පලතුරු පැළ</h3>
+                <h3 className="product-name">දෙහි</h3>
                 <p className="product-desc">
-                  අඹ, දෙල්, පේර, රඹුටන්, දොඩම් ඇතුළු විවිධ පලතුරු ගස් වර්ග.
+                  සුදුසුම ගුණාත්මක දෙහි පැළ, රුපියල් 100.
                 </p>
-                <span className="product-link">වැඩිදුර →</span>
+                <span className="product-price">රු. 100</span>
               </div>
             </div>
             <div className="product-card">
               <div className="product-img">
-                <span>🌳</span>
+                <img src="/images/pepper.png" alt="ගම්මිරිස්" />
                 <div className="product-img-shine"></div>
               </div>
               <div className="product-body">
-                <h3 className="product-name">සෙවන ගස්</h3>
+                <h3 className="product-name">ගම්මිරිස්</h3>
                 <p className="product-desc">
-                  කොහොඹ, නා, බෝ, දියතුඹ, නික වැනි සෙවන සපයන මහා වෘක්ෂ වර්ග.
+                  සුදුසුම ගුණාත්මක ගම්මිරිස් පැළ, රුපියල් 100.
                 </p>
-                <span className="product-link">වැඩිදුර →</span>
+                <span className="product-price">රු. 100</span>
               </div>
             </div>
             <div className="product-card">
               <div className="product-img">
-                <span>🌺</span>
+                <img src="/images/puwak.png" alt="පුවක්" />
                 <div className="product-img-shine"></div>
               </div>
               <div className="product-body">
-                <h3 className="product-name">මල් පැළ</h3>
+                <h3 className="product-name">පුවක්</h3>
                 <p className="product-desc">
-                  රෝස, කැටලියා, ටියුලිප්, වර්ණවත් මල් පිපෙන පඳුරු වර්ග රැසක්.
+                  සුදුසුම ගුණාත්මක පුවක් පැළ, රුපියල් 100.
                 </p>
-                <span className="product-link">වැඩිදුර →</span>
-              </div>
-            </div>
-            <div className="product-card">
-              <div className="product-img">
-                <span>🎍</span>
-                <div className="product-img-shine"></div>
-              </div>
-              <div className="product-body">
-                <h3 className="product-name">බොන්සායි</h3>
-                <p className="product-desc">
-                  විවිධ මෝස්තරවලින් යුත් බොන්සායි ගස් වර්ග, නිවස අලංකාරයට.
-                </p>
-                <span className="product-link">වැඩිදුර →</span>
-              </div>
-            </div>
-            <div className="product-card">
-              <div className="product-img">
-                <span>🌿</span>
-                <div className="product-img-shine"></div>
-              </div>
-              <div className="product-body">
-                <h3 className="product-name">ඖෂධීය පැළ</h3>
-                <p className="product-desc">
-                  අලෝවේරා, මදුරුතලා, ඉරමුසු, හීන් බෝවිටියා වැනි ඖෂධීය පැළ.
-                </p>
-                <span className="product-link">වැඩිදුර →</span>
-              </div>
-            </div>
-            <div className="product-card">
-              <div className="product-img">
-                <span>🌵</span>
-                <div className="product-img-shine"></div>
-              </div>
-              <div className="product-body">
-                <h3 className="product-name">ගෘහස්ථ පැළ</h3>
-                <p className="product-desc">
-                  නිවස තුළ වගා කිරීමට සුදුසු අලංකාර පැළ වර්ග රැසක්.
-                </p>
-                <span className="product-link">වැඩිදුර →</span>
+                <span className="product-price">රු. 100</span>
               </div>
             </div>
           </div>
@@ -235,43 +196,27 @@ function App() {
             </p>
           </div>
           <div className="gallery-grid">
-            <div className="gallery-item large">
+            <div className="gallery-item">
               <div className="gallery-placeholder">
-                <span>🌴</span>
+                <img src="/images/dehi.webp" alt="දෙහි" />
                 <div className="gallery-overlay">
-                  <span className="gallery-label">අපගේ තවාන</span>
+                  <span className="gallery-label">දෙහි</span>
                 </div>
               </div>
             </div>
             <div className="gallery-item">
               <div className="gallery-placeholder">
-                <span>🌱</span>
+                <img src="/images/pepper.png" alt="ගම්මිරිස්" />
                 <div className="gallery-overlay">
-                  <span className="gallery-label">නව පැළ</span>
+                  <span className="gallery-label">ගම්මිරිස්</span>
                 </div>
               </div>
             </div>
             <div className="gallery-item">
               <div className="gallery-placeholder">
-                <span>🌺</span>
+                <img src="/images/puwak.png" alt="පුවක්" />
                 <div className="gallery-overlay">
-                  <span className="gallery-label">මල්</span>
-                </div>
-              </div>
-            </div>
-            <div className="gallery-item">
-              <div className="gallery-placeholder">
-                <span>🌳</span>
-                <div className="gallery-overlay">
-                  <span className="gallery-label">ගස්</span>
-                </div>
-              </div>
-            </div>
-            <div className="gallery-item">
-              <div className="gallery-placeholder">
-                <span>🌿</span>
-                <div className="gallery-overlay">
-                  <span className="gallery-label">ඖෂධීය</span>
+                  <span className="gallery-label">පුවක්</span>
                 </div>
               </div>
             </div>
@@ -296,7 +241,7 @@ function App() {
                 </div>
                 <div>
                   <h4>ලිපිනය</h4>
-                  <p>සුනේත්‍රා පැළ තවාන, ශ්‍රී ලංකාව</p>
+                  <p>සුනේත්‍රා පැළ තවාන , වැවකැලේ, කුඹල්ගමුව</p>
                 </div>
               </div>
               <div className="contact-card">
@@ -305,7 +250,7 @@ function App() {
                 </div>
                 <div>
                   <h4>දුරකථන</h4>
-                  <p>+94 71 234 5678</p>
+                  <p>077 558 6115</p>
                 </div>
               </div>
               <div className="contact-card">
@@ -314,7 +259,7 @@ function App() {
                 </div>
                 <div>
                   <h4>ඊමේල්</h4>
-                  <p>info@sunethrapala.lk</p>
+                  <p>sunethrairangani70@gmail.com</p>
                 </div>
               </div>
               <div className="contact-card">
@@ -324,7 +269,7 @@ function App() {
                 <div>
                   <h4>විවෘත වේලාව</h4>
                   <p>උදේ 8.00 - සවස 6.00</p>
-                  <p className="text-small">ඉරිදා වසායි</p>
+                 
                 </div>
               </div>
             </div>
