@@ -99,49 +99,87 @@ function App() {
         </div>
       </nav>
 
-      <section id="hero" className="relative flex min-h-screen items-center justify-center overflow-hidden">
+      <section id="hero" className="relative flex min-h-screen items-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }}></div>
-        <div className="absolute inset-0 bg-primary-dark/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/95 via-primary-dark/80 to-primary-dark/40"></div>
 
-        <div className="relative z-10 mx-auto max-w-4xl px-6 pb-24 pt-32 text-center text-white">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-medium text-accent-light backdrop-blur">
-            🌱 ස්වභාවික පැළ තවාන
-          </div>
-          <h1 className="text-5xl font-extrabold leading-tight md:text-7xl">
-            සුනේත්‍රා<br />
-            <span className="text-accent">පැළ තවාන</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-white/85 md:text-xl">
-            ගුණාත්මක පැළ වර්ග ඔබ වෙතට... ස්වභාවයට ආදරය කරන සෑම කෙනෙකුටම අපගේ තවාන විවෘතයි.
-          </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button
-              onClick={() => scrollTo('products')}
-              className="group flex cursor-pointer items-center gap-3 rounded-full bg-accent px-9 py-4 text-base font-bold text-primary-dark shadow-xl transition hover:bg-accent-light"
-            >
-              නිෂ්පාදන බලන්න
-              <span className="transition-transform group-hover:translate-x-1">→</span>
-            </button>
-            <button
-              onClick={() => scrollTo('contact')}
-              className="cursor-pointer rounded-full border-2 border-white/60 px-9 py-4 text-base font-semibold text-white transition hover:bg-white/10"
-            >
-              සම්බන්ධ වන්න
-            </button>
+        <span className="animate-float absolute left-[6%] top-[22%] z-10 text-4xl opacity-60 md:text-5xl">🌿</span>
+        <span className="animate-float-delay absolute right-[10%] top-[18%] z-10 text-3xl opacity-50 md:text-4xl">🍃</span>
+        <span className="animate-float-slow absolute bottom-[28%] left-[12%] z-10 text-3xl opacity-50 md:text-4xl">🌱</span>
+        <span className="animate-float absolute right-[16%] bottom-[24%] z-10 text-4xl opacity-40 md:text-5xl">🌳</span>
+
+        <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 gap-14 px-5 pb-24 pt-32 lg:grid-cols-2 lg:items-center">
+          <div className="text-center text-white lg:text-left">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-medium text-accent-light backdrop-blur">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full bg-accent"></span>
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent"></span>
+              </span>
+              🌱 ස්වභාවික පැළ තවාන
+            </div>
+
+            <h1 className="text-5xl font-extrabold leading-[1.15] md:text-7xl">
+              සුනේත්‍රා<br />
+              <span className="text-gradient">පැළ තවාන</span>
+            </h1>
+
+            <p className="mx-auto mt-6 max-w-xl text-lg text-white/85 md:text-xl lg:mx-0">
+              ගුණාත්මක පැළ වර්ග ඔබ වෙතට... ස්වභාවයට ආදරය කරන සෑම කෙනෙකුටම අපගේ තවාන විවෘතයි.
+            </p>
+
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
+              <button
+                onClick={() => scrollTo('products')}
+                className="group flex cursor-pointer items-center gap-3 rounded-full bg-accent px-9 py-4 text-base font-bold text-primary-dark shadow-xl transition hover:bg-accent-light hover:shadow-2xl"
+              >
+                නිෂ්පාදන බලන්න
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </button>
+              <button
+                onClick={() => scrollTo('contact')}
+                className="cursor-pointer rounded-full border-2 border-white/60 px-9 py-4 text-base font-semibold text-white backdrop-blur transition hover:border-white hover:bg-white/10"
+              >
+                සම්බන්ධ වන්න
+              </button>
+            </div>
+
+            <div className="mx-auto mt-12 grid max-w-xl grid-cols-3 divide-x divide-white/15 rounded-3xl border border-white/15 bg-white/10 px-4 py-6 backdrop-blur lg:mx-0">
+              <div className="px-3">
+                <p className="text-3xl font-extrabold text-accent-light md:text-4xl">10+</p>
+                <p className="mt-1 text-sm text-white/80">පැළ වර්ග</p>
+              </div>
+              <div className="px-3">
+                <p className="text-3xl font-extrabold text-accent-light md:text-4xl">10+</p>
+                <p className="mt-1 text-sm text-white/80">වසර අත්දැකීම්</p>
+              </div>
+              <div className="px-3">
+                <p className="text-3xl font-extrabold text-accent-light md:text-4xl">100+</p>
+                <p className="mt-1 text-sm text-white/80">සතුටු පාරිභෝගිකයින්</p>
+              </div>
+            </div>
           </div>
 
-          <div className="mx-auto mt-14 flex max-w-xl items-center justify-center divide-x divide-white/20 rounded-3xl border border-white/15 bg-white/10 px-6 py-6 backdrop-blur">
-            <div className="flex-1 px-2">
-              <p className="text-3xl font-extrabold text-accent-light md:text-4xl">10+</p>
-              <p className="mt-1 text-sm text-white/80">පැළ වර්ග</p>
+          <div className="relative hidden lg:block">
+            <div className="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full border border-accent/30"></div>
+            <div className="animate-float-slow absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/20"></div>
+
+            <div className="animate-float relative mx-auto w-72 overflow-hidden rounded-[2rem] border-4 border-white/20 bg-white/10 shadow-2xl backdrop-blur">
+              <img src={logoImg} alt="සුනේත්‍රා පැළ තවාන" className="h-96 w-full object-cover" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary-dark/90 to-transparent p-5 pt-16 text-white">
+                <p className="text-sm font-semibold text-accent-light">🌟 විශේෂ ඇණවුම්</p>
+                <p className="text-lg font-extrabold">ඔබේ පැළ තෝරාගන්න</p>
+              </div>
             </div>
-            <div className="flex-1 px-2">
-              <p className="text-3xl font-extrabold text-accent-light md:text-4xl">10+</p>
-              <p className="mt-1 text-sm text-white/80">වසර අත්දැකීම්</p>
+
+            <div className="animate-float-delay absolute -left-8 top-6 rounded-2xl border border-white/20 bg-white/90 px-5 py-3 shadow-xl backdrop-blur">
+              <p className="text-2xl">🌱</p>
+              <p className="text-xs font-bold text-primary-dark">පැළ 100+</p>
+              <p className="text-[10px] text-gray-400">දැන් තොගේ</p>
             </div>
-            <div className="flex-1 px-2">
-              <p className="text-3xl font-extrabold text-accent-light md:text-4xl">100+</p>
-              <p className="mt-1 text-sm text-white/80">සතුටු පාරිභෝගිකයින්</p>
+            <div className="animate-float absolute -right-6 bottom-16 rounded-2xl border border-white/20 bg-white/90 px-5 py-3 shadow-xl backdrop-blur">
+              <p className="text-2xl">💰</p>
+              <p className="text-xs font-bold text-primary-dark">රු. 100 සිට</p>
+              <p className="text-[10px] text-gray-400">දැරිය හැකි මිල</p>
             </div>
           </div>
         </div>
@@ -153,27 +191,69 @@ function App() {
         </div>
       </section>
 
-      <section id="about" className="bg-cream py-24">
-        <div className="mx-auto max-w-6xl px-5">
-          <div className="mx-auto mb-14 max-w-2xl text-center">
-            <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
-              අප ගැන
-            </span>
-            <h2 className="text-4xl font-extrabold text-primary-dark md:text-5xl">
-              අපගේ <span className="text-accent">කතාව</span>
-            </h2>
-            <p className="mt-4 text-gray-500">
-              ස්වභාව ධර්මයට ආදරය කරන පිරිසක් ලෙස අප මෙම තවාන ආරම්භ කළෙමු.
-            </p>
+      <section id="about" className="relative overflow-hidden bg-cream py-24">
+        <div className="pointer-events-none absolute -left-32 top-24 h-72 w-72 rounded-full bg-primary/5"></div>
+        <div className="pointer-events-none absolute -right-32 bottom-16 h-80 w-80 rounded-full bg-accent/10"></div>
+
+        <div className="relative mx-auto max-w-6xl px-5">
+          <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
+            <div className="relative">
+              <div className="absolute -left-6 -top-6 h-32 w-32 rounded-full border-4 border-accent/30"></div>
+              <div className="absolute -bottom-8 -right-4 h-44 w-44 rounded-full border border-primary/20"></div>
+
+              <div className="relative overflow-hidden rounded-[2rem] border-4 border-white shadow-2xl">
+                <img src={logoImg} alt="අපගේ තවාන" className="h-[26rem] w-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/40 to-transparent"></div>
+              </div>
+
+              <div className="animate-float absolute -bottom-6 left-6 rounded-2xl bg-white px-6 py-4 shadow-2xl">
+                <p className="text-3xl font-extrabold text-primary">10+</p>
+                <p className="text-xs font-semibold text-gray-500">වසර අත්දැකීම්</p>
+              </div>
+            </div>
+
+            <div>
+              <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
+                අප ගැන
+              </span>
+              <h2 className="text-4xl font-extrabold text-primary-dark md:text-5xl">
+                අපගේ <span className="text-accent">කතාව</span>
+              </h2>
+              <p className="mt-5 leading-relaxed text-gray-500">
+                ස්වභාව ධර්මයට ආදරය කරන පිරිසක් ලෙස අප මෙම තවාන ආරම්භ කළෙමු. වසර ගණනාවක
+                පුළුල් අත්දැකීම් මත පදනම්ව ගුණාත්මක පැළ වර්ග පාරිභෝගිකයන් වෙත
+                ලබාදීම අපගේ ප්‍රධාන ඉලක්කයයි.
+              </p>
+
+              <div className="mt-8 space-y-4">
+                {[
+                  'සියලුම පැළ ගුණාත්මක බවින් තෝරා ගනු ලැබේ',
+                  'වගා කිරීම පිළිබඳ නොමිලේ උපදෙස්',
+                  'සාධාරණ හා තරඟකාරී මිල ගණන්',
+                  'ඇණවුම් සඳහා නිවසටම බෙදාහැරීම',
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-md">
+                      ✓
+                    </span>
+                    <p className="text-sm font-medium text-gray-600">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
-            {aboutCards.map((card) => (
+          <div className="mt-20 grid gap-8 md:grid-cols-3">
+            {aboutCards.map((card, i) => (
               <div
                 key={card.title}
-                className="group rounded-3xl border border-primary/10 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-3xl bg-white p-8 pt-12 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
-                <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/10 to-accent/20 text-4xl transition-transform group-hover:scale-110">
+                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-primary via-primary-light to-accent opacity-60 transition-opacity group-hover:opacity-100"></div>
+                <span className="absolute right-6 top-5 text-5xl font-extrabold text-primary/5 transition-colors group-hover:text-accent/20">
+                  0{i + 1}
+                </span>
+                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/10 to-accent/20 text-4xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
                   {card.icon}
                 </div>
                 <h3 className="mb-3 text-xl font-bold text-primary-dark">{card.title}</h3>
@@ -202,23 +282,33 @@ function App() {
             {products.map((product) => (
               <div
                 key={product.name}
-                className="group overflow-hidden rounded-3xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                className="group overflow-hidden rounded-3xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
               >
-                <div className="flex h-80 items-center justify-center bg-gradient-to-b from-mist to-cream p-6">
+                <div className="relative flex h-80 items-center justify-center bg-gradient-to-b from-mist to-cream p-6">
+                  <span className="absolute left-4 top-4 z-10 rounded-full bg-primary/90 px-4 py-1.5 text-xs font-bold text-white shadow-md backdrop-blur">
+                    🌱 නවතම
+                  </span>
+                  <span className="absolute right-4 top-4 z-10 rounded-full bg-accent px-4 py-1.5 text-sm font-extrabold text-primary-dark shadow-md">
+                    {product.price}
+                  </span>
                   <img
                     src={product.img}
                     alt={product.name}
                     className="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-110"
                   />
+                  <div className="absolute inset-0 bg-primary-dark/0 transition-colors duration-300 group-hover:bg-primary-dark/5"></div>
                 </div>
-                <div className="flex items-center justify-between p-6">
+                <div className="flex items-center justify-between gap-4 border-t border-gray-100 p-6">
                   <div>
                     <h3 className="text-lg font-bold text-primary-dark">{product.name}</h3>
                     <p className="mt-1 text-sm text-gray-500">{product.desc}</p>
                   </div>
-                  <span className="shrink-0 rounded-full bg-accent px-5 py-2 text-base font-bold text-primary-dark shadow">
-                    {product.price}
-                  </span>
+                  <button
+                    onClick={() => scrollTo('contact')}
+                    className="shrink-0 cursor-pointer rounded-full border-2 border-primary px-5 py-2 text-sm font-bold text-primary transition-all hover:bg-primary hover:text-white hover:shadow-lg"
+                  >
+                    ඇණවුම්
+                  </button>
                 </div>
               </div>
             ))}
@@ -241,17 +331,25 @@ function App() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {products.map((product) => (
-              <div key={product.name} className="group relative h-72 overflow-hidden rounded-3xl shadow-md">
+            {products.map((product, i) => (
+              <div
+                key={product.name}
+                className="group relative h-[26rem] overflow-hidden rounded-3xl bg-gradient-to-b from-mist to-cream shadow-md"
+              >
                 <img
                   src={product.img}
                   alt={product.name}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="absolute inset-0 m-auto h-full w-full object-contain p-5 transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/70 via-transparent to-transparent opacity-80 transition-opacity group-hover:opacity-100"></div>
-                <div className="absolute bottom-0 left-0 flex w-full items-end justify-between p-5 text-white">
-                  <span className="text-lg font-bold">{product.name}</span>
-                  <span className="rounded-full bg-accent px-4 py-1 text-sm font-bold text-primary-dark">
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary-dark/80 to-transparent pt-20"></div>
+                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-6 text-white">
+                  <div>
+                    <span className="mb-2 inline-block rounded-full bg-white/20 px-4 py-1 text-xs font-semibold backdrop-blur">
+                      {i === 0 ? 'විශේෂාංගය' : 'ගැලරිය'}
+                    </span>
+                    <h3 className="text-xl font-extrabold">{product.name}</h3>
+                  </div>
+                  <span className="rounded-full bg-accent px-4 py-1.5 text-sm font-bold text-primary-dark">
                     {product.price}
                   </span>
                 </div>
@@ -381,51 +479,117 @@ function App() {
         </div>
       </section>
 
-      <footer className="bg-primary-dark text-white">
-        <div className="mx-auto max-w-6xl px-5 py-16">
-          <div className="grid gap-12 md:grid-cols-3">
-            <div>
-              <img src={logoImg} alt="logo" className="mb-5 h-16 w-16 rounded-full border-2 border-white/30 object-cover" />
-              <p className="text-sm leading-relaxed text-white/70">
+      <footer className="relative overflow-hidden bg-primary-dark text-white">
+        <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-accent/10"></div>
+        <div className="pointer-events-none absolute -bottom-24 -left-16 h-80 w-80 rounded-full bg-white/5"></div>
+
+        <div className="relative mx-auto max-w-6xl px-5 pt-16">
+          <div className="mb-14 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+            <div className="lg:col-span-2">
+              <img src={logoImg} alt="logo" className="mb-5 h-16 w-16 rounded-full border-2 border-accent/40 object-cover shadow-lg" />
+              <p className="max-w-md text-sm leading-relaxed text-white/70">
                 ගුණාත්මක පැළ හා ගස් වර්ග ඔබ වෙතට... ස්වභාවයට ආදරය කරන සෑම කෙනෙකුටම අපගේ තවාන විවෘතයි.
               </p>
               <div className="mt-6 flex gap-3">
-                <span className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-white/10 transition hover:bg-accent hover:text-primary-dark">📘</span>
-                <span className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-white/10 transition hover:bg-accent hover:text-primary-dark">📸</span>
-                <span className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-white/10 transition hover:bg-accent hover:text-primary-dark">📱</span>
-                <span className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-white/10 transition hover:bg-accent hover:text-primary-dark">▶️</span>
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Facebook"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-accent hover:text-primary-dark"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://wa.me/94775586115"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="WhatsApp"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-accent hover:text-primary-dark"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="YouTube"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-accent hover:text-primary-dark"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                    <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Instagram"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-accent hover:text-primary-dark"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                  </svg>
+                </a>
               </div>
             </div>
+
             <div>
               <h4 className="mb-5 text-lg font-bold text-accent-light">ඉක්මන් සබැඳි</h4>
               <ul className="space-y-3 text-sm text-white/70">
                 {navLinks.map((link) => (
                   <li key={link.id}>
-                    <a onClick={() => scrollTo(link.id)} className="cursor-pointer transition hover:text-accent-light">
+                    <a
+                      onClick={() => scrollTo(link.id)}
+                      className="group inline-flex cursor-pointer items-center gap-2 transition hover:text-accent-light"
+                    >
+                      <span className="text-accent transition-transform group-hover:translate-x-1">→</span>
                       {link.label}
                     </a>
                   </li>
                 ))}
                 <li>
-                  <a onClick={() => scrollTo('contact')} className="cursor-pointer transition hover:text-accent-light">
+                  <a
+                    onClick={() => scrollTo('contact')}
+                    className="group inline-flex cursor-pointer items-center gap-2 transition hover:text-accent-light"
+                  >
+                    <span className="text-accent transition-transform group-hover:translate-x-1">→</span>
                     සම්බන්ධ වන්න
                   </a>
                 </li>
               </ul>
             </div>
+
             <div>
-              <h4 className="mb-5 text-lg font-bold text-accent-light">සේවා</h4>
+              <h4 className="mb-5 text-lg font-bold text-accent-light">සම්බන්ධතා</h4>
               <ul className="space-y-3 text-sm text-white/70">
-                <li>පැළ ඇණවුම්</li>
-                <li>උපදෙස්</li>
-                <li>තවාන් සංචාරය</li>
-                <li>තොග මිලදී ගැනීම්</li>
+                <li className="flex items-start gap-3">
+                  <span>📍</span>
+                  <span>සුනේත්‍රා පැළ තවාන , වැවකැලේ, කුඹල්ගමුව</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span>📞</span>
+                  <span>077 558 6115</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span>✉️</span>
+                  <span className="break-all">sunethrairangani70@gmail.com</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span>🕐</span>
+                  <span>උදේ 8.00 - සවස 6.00</span>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="border-t border-white/10 py-6 text-center text-sm text-white/60">
-          © 2026 සුනේත්‍රා පැළ තවාන. සියලුම හිමිකම් ඇවිරිණි.
+
+        <div className="relative border-t border-white/10 py-6 text-center text-sm text-white/60">
+          <p>© 2026 සුනේත්‍රා පැළ තවාන. සියලුම හිමිකම් ඇවිරිණි.</p>
         </div>
       </footer>
     </>
